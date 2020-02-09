@@ -88,7 +88,6 @@ function create(){
       var postData  = req.body;
       mysqlConnection.query('INSERT INTO veiculo SET ?', postData, function (error, results, fields) {
          if (error) throw error;
-         res.redirect('/index');
        });
    });
    console.log("Função create() ok!");
@@ -111,7 +110,6 @@ function edit(){
     app.get('/edit', function (req, res) {
       mysqlConnection.query('SELECT * FROM veiculo WHERE id = ?',req.query.id, function (error,rs){
          if (error) throw error;
-         res.render('index',{veiculos : rs[0]});
        });
    });
    console.log("Função edit() ok!");
