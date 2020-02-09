@@ -1,7 +1,7 @@
 
-const express = require('express')
-const bodyParser = require('body-parser')
-const mysql = require('mysql')
+const express = require('express');
+const bodyParser = require('body-parser');
+const mysql = require('mysql');
 
 var mysqlConnection = mysql.createConnection({
     host:'localhost',
@@ -10,7 +10,7 @@ var mysqlConnection = mysql.createConnection({
     database: 'veiculodb'
 });
 
-var app = express()
+var app = express();
 
 function conecta(){
     mysqlConnection.connect((err)=>{
