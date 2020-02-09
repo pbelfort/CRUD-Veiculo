@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src='main.js'></script>
+    <style>
+        table {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        td, th {
+          border: 1px solid #0f0f0f;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        
+        a{
+            color: rgb(0, 0, 0);
+            padding-left: 25px;
+        }
+        a:hover{
+            color: blue;          
+        }
+        h1{text-align: center;}
+        body{margin-top: 10%;
+            background-color: f2f2f2;
+        }
+        </style>
+</head>
+<body>
+    <h1>Tabela Veiculos</h1>
+    <h1><a href="http://localhost:3000/index"> Cadastrar Veiculo </a>  </h1>
+<table class="table">
+    <tr>
+        <td>id</td>
+        <td>placa</td>
+        <td>chassi</td> 
+        <td>renavam</td>
+        <td>modelo</td>
+        <td>marca</td>   
+        <td>ano</td>
+    </tr>
+    <% veiculos.forEach(function(item){ %>
+    <tr>
+        <td><%= item.id%></td>
+        <td><%= item.placa%></td>
+        <td><%= item.chassi%></td>
+        <td><%= item.renavam%></td>
+        <td><%= item.modelo%></td>
+        <td><%= item.marca%></td>
+        <td><%= item.ano%></td>
+        <td>
+            <a href="/delete?id=<%= item.id %>" onClick="return confirm('Deseja excluir?')"> Delete </a>
+            <a href="/edit?id=<%= item.id %>"> Edit </a>
+         </td>
+    </tr>
+    <% }); %>
+</table>
+</body>
+</html>
+
+
