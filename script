@@ -2,11 +2,11 @@ use veiculodb;
 
 CREATE TABLE `veiculo` ( 
 	`id` int(11) not null auto_increment,
-    `placa` varchar(8) default null,
-    `chassi` int(11) default null,
-	`renavam` int(11) default null,
-	`modelo` varchar(20) default null,
-    `marca` varchar(20) default null,
-    `ano` int(4) default null,
+    `placa` varchar(8) not null,
+    `chassi` int(11) not null,
+	`renavam` int(11) not null,
+	`modelo` varchar(20) not null,
+    `marca` varchar(20) not null,
+    `ano` int(4) not null,
     primary key (`id`)
 )engine=InnoDB auto_increment=0;
