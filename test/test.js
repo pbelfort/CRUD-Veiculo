@@ -96,7 +96,6 @@ function create(){
      return false;
     }
 }
-
 describe('create()', function() {
   describe('#indexOf create()', function() {
     it('Retorna FALSE caso valor seja inexistente!', function() {
