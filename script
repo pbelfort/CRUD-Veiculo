@@ -1,4 +1,5 @@
 use veiculodb; 
+
 CREATE TABLE `veiculo` ( 
 	`id` int(11) not null auto_increment,
     `placa` varchar(8) default null,
